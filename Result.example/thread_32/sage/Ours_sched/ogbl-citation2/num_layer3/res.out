@@ -1,0 +1,64 @@
+Reorder pre-processing Time: 0.6685562133789062
+#Params: 328448
+Predicting on test data...
+Use reorder
+Aggregation Time: 0.7066373825073242
+Use reorder
+Aggregation Time: 1.4220657348632812
+Use reorder
+Aggregation Time: 1.4216034412384033
+Use reorder
+Aggregation Time: 0.7070643901824951
+Use reorder
+Aggregation Time: 1.4214434623718262
+Use reorder
+Aggregation Time: 1.4203743934631348
+Use reorder
+Aggregation Time: 0.7037105560302734
+Use reorder
+Aggregation Time: 1.4542183876037598
+Use reorder
+Aggregation Time: 1.4345831871032715
+Use reorder
+Aggregation Time: 0.7416942119598389
+Use reorder
+Aggregation Time: 1.5125725269317627
+Use reorder
+Aggregation Time: 1.4580581188201904
+Use reorder
+Aggregation Time: 0.8789377212524414
+Use reorder
+Aggregation Time: 1.3841545581817627
+Use reorder
+Aggregation Time: 1.2282536029815674
+Use reorder
+Aggregation Time: 1.0337982177734375
+Use reorder
+Aggregation Time: 1.3595333099365234
+Use reorder
+Aggregation Time: 1.2427575588226318
+Use reorder
+Aggregation Time: 0.9990286827087402
+Use reorder
+Aggregation Time: 1.4287583827972412
+Use reorder
+Aggregation Time: 1.179337978363037
+Use reorder
+Aggregation Time: 0.8745176792144775
+Use reorder
+Aggregation Time: 1.3785927295684814
+Use reorder
+Aggregation Time: 1.3882803916931152
+Use reorder
+Aggregation Time: 0.903348445892334
+Use reorder
+Aggregation Time: 1.501234531402588
+Use reorder
+Aggregation Time: 1.3320744037628174
+Use reorder
+Aggregation Time: 0.979543924331665
+Use reorder
+Aggregation Time: 1.2981939315795898
+Use reorder
+Aggregation Time: 1.3309571743011475
+(0.7506510615348816, 0.6770833730697632, 0.6627603769302368)

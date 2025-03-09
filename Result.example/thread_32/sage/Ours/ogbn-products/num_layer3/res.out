@@ -1,0 +1,95 @@
+Reorder pre-processing Time: 0.4172801971435547
+Graph params -> number of nodes: 2449029, number of edges: 123718280, number of features: 100, hidden layer: 256, number of classes: 47
+#Params: 206895
+Predicting on test data...
+Use reorder
+Use Compress
+Aggregation Time: 1.1546273231506348
+Use reorder
+Use Compress
+Aggregation Time: 2.8003947734832764
+Use reorder
+Use Compress
+Aggregation Time: 0.7158615589141846
+Use reorder
+Use Compress
+Aggregation Time: 1.1699161529541016
+Use reorder
+Use Compress
+Aggregation Time: 2.803239107131958
+Use reorder
+Use Compress
+Aggregation Time: 0.7230842113494873
+Use reorder
+Use Compress
+Aggregation Time: 1.168874740600586
+Use reorder
+Use Compress
+Aggregation Time: 2.735874891281128
+Use reorder
+Use Compress
+Aggregation Time: 0.7114970684051514
+Use reorder
+Use Compress
+Aggregation Time: 1.1545014381408691
+Use reorder
+Use Compress
+Aggregation Time: 2.557208299636841
+Use reorder
+Use Compress
+Aggregation Time: 0.7453873157501221
+Use reorder
+Use Compress
+Aggregation Time: 1.1100711822509766
+Use reorder
+Use Compress
+Aggregation Time: 2.774275779724121
+Use reorder
+Use Compress
+Aggregation Time: 0.7013759613037109
+Use reorder
+Use Compress
+Aggregation Time: 1.125688076019287
+Use reorder
+Use Compress
+Aggregation Time: 2.613088846206665
+Use reorder
+Use Compress
+Aggregation Time: 0.7026805877685547
+Use reorder
+Use Compress
+Aggregation Time: 1.0797181129455566
+Use reorder
+Use Compress
+Aggregation Time: 2.400134325027466
+Use reorder
+Use Compress
+Aggregation Time: 0.7074458599090576
+Use reorder
+Use Compress
+Aggregation Time: 1.1561391353607178
+Use reorder
+Use Compress
+Aggregation Time: 2.6799354553222656
+Use reorder
+Use Compress
+Aggregation Time: 0.7222697734832764
+Use reorder
+Use Compress
+Aggregation Time: 1.0674760341644287
+Use reorder
+Use Compress
+Aggregation Time: 2.4283485412597656
+Use reorder
+Use Compress
+Aggregation Time: 0.6944916248321533
+Use reorder
+Use Compress
+Aggregation Time: 1.0747435092926025
+Use reorder
+Use Compress
+Aggregation Time: 2.3972718715667725
+Use reorder
+Use Compress
+Aggregation Time: 0.6857452392578125
+(0.9443786079393739, 0.9245479744678686, 0.7901581995498603)

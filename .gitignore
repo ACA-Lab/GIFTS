@@ -1,8 +1,6 @@
 dataset/*
 nohup.out
 __pycache__
-*.out
 .vscode
-Excel*
 code/FusedMM/bin
 code/FusedMM/dataset

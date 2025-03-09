@@ -1,0 +1,94 @@
+Reorder pre-processing Time: 0.5271880626678467
+#Params: 164608
+Predicting on test data...
+Use reorder
+Use Compress
+Aggregation Time: 0.481842041015625
+Use reorder
+Use Compress
+Aggregation Time: 0.8626589775085449
+Use reorder
+Use Compress
+Aggregation Time: 0.8930439949035645
+Use reorder
+Use Compress
+Aggregation Time: 0.4798624515533447
+Use reorder
+Use Compress
+Aggregation Time: 0.9404518604278564
+Use reorder
+Use Compress
+Aggregation Time: 0.9297981262207031
+Use reorder
+Use Compress
+Aggregation Time: 0.49134016036987305
+Use reorder
+Use Compress
+Aggregation Time: 0.8904469013214111
+Use reorder
+Use Compress
+Aggregation Time: 0.8826138973236084
+Use reorder
+Use Compress
+Aggregation Time: 0.4711179733276367
+Use reorder
+Use Compress
+Aggregation Time: 0.8598225116729736
+Use reorder
+Use Compress
+Aggregation Time: 0.8381390571594238
+Use reorder
+Use Compress
+Aggregation Time: 0.46942615509033203
+Use reorder
+Use Compress
+Aggregation Time: 0.7862038612365723
+Use reorder
+Use Compress
+Aggregation Time: 0.7819645404815674
+Use reorder
+Use Compress
+Aggregation Time: 0.43566083908081055
+Use reorder
+Use Compress
+Aggregation Time: 0.7910599708557129
+Use reorder
+Use Compress
+Aggregation Time: 0.6860425472259521
+Use reorder
+Use Compress
+Aggregation Time: 0.44229626655578613
+Use reorder
+Use Compress
+Aggregation Time: 0.7723157405853271
+Use reorder
+Use Compress
+Aggregation Time: 0.771939754486084
+Use reorder
+Use Compress
+Aggregation Time: 0.48189473152160645
+Use reorder
+Use Compress
+Aggregation Time: 0.8429443836212158
+Use reorder
+Use Compress
+Aggregation Time: 0.675473690032959
+Use reorder
+Use Compress
+Aggregation Time: 0.391756534576416
+Use reorder
+Use Compress
+Aggregation Time: 0.788799524307251
+Use reorder
+Use Compress
+Aggregation Time: 0.764406681060791
+Use reorder
+Use Compress
+Aggregation Time: 0.3848235607147217
+Use reorder
+Use Compress
+Aggregation Time: 0.6795225143432617
+Use reorder
+Use Compress
+Aggregation Time: 0.750063419342041
+(0.8632811903953552, 0.7936198115348816, 0.830078125)

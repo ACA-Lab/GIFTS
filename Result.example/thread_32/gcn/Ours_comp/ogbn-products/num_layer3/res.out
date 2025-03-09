@@ -1,0 +1,64 @@
+Graph params -> number of nodes: 2449029, number of edges: 126167053, number of features: 100, hidden layer: 256, number of classes: 47
+#Params: 103727
+Predicting on test data...
+Use Compress
+Aggregation Time: 2.866663694381714
+Use Compress
+Aggregation Time: 7.285517930984497
+Use Compress
+Aggregation Time: 1.857084035873413
+Use Compress
+Aggregation Time: 2.68011212348938
+Use Compress
+Aggregation Time: 5.921319484710693
+Use Compress
+Aggregation Time: 1.946138858795166
+Use Compress
+Aggregation Time: 2.8178765773773193
+Use Compress
+Aggregation Time: 6.1608521938323975
+Use Compress
+Aggregation Time: 1.9456353187561035
+Use Compress
+Aggregation Time: 2.8945999145507812
+Use Compress
+Aggregation Time: 6.00126576423645
+Use Compress
+Aggregation Time: 1.8757636547088623
+Use Compress
+Aggregation Time: 2.8501973152160645
+Use Compress
+Aggregation Time: 5.700887441635132
+Use Compress
+Aggregation Time: 1.8020696640014648
+Use Compress
+Aggregation Time: 2.7546682357788086
+Use Compress
+Aggregation Time: 6.191396236419678
+Use Compress
+Aggregation Time: 1.9097559452056885
+Use Compress
+Aggregation Time: 2.6811368465423584
+Use Compress
+Aggregation Time: 5.852145671844482
+Use Compress
+Aggregation Time: 1.8774161338806152
+Use Compress
+Aggregation Time: 2.7441904544830322
+Use Compress
+Aggregation Time: 5.868030309677124
+Use Compress
+Aggregation Time: 1.807551622390747
+Use Compress
+Aggregation Time: 2.612055540084839
+Use Compress
+Aggregation Time: 5.736954212188721
+Use Compress
+Aggregation Time: 1.8494577407836914
+Use Compress
+Aggregation Time: 2.7075557708740234
+Use Compress
+Aggregation Time: 5.7478039264678955
+Use Compress
+Aggregation Time: 1.7806346416473389
+(0.9363019098237673, 0.9207588434249676, 0.7549337103625653)

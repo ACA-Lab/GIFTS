@@ -1,0 +1,63 @@
+#Params: 328448
+Predicting on test data...
+Use Compress
+Aggregation Time: 0.4276249408721924
+Use Compress
+Aggregation Time: 0.8240807056427002
+Use Compress
+Aggregation Time: 0.8621768951416016
+Use Compress
+Aggregation Time: 0.41184234619140625
+Use Compress
+Aggregation Time: 0.6362731456756592
+Use Compress
+Aggregation Time: 0.8805744647979736
+Use Compress
+Aggregation Time: 0.44259119033813477
+Use Compress
+Aggregation Time: 0.8013896942138672
+Use Compress
+Aggregation Time: 0.6911211013793945
+Use Compress
+Aggregation Time: 0.3497943878173828
+Use Compress
+Aggregation Time: 0.6975646018981934
+Use Compress
+Aggregation Time: 0.6373183727264404
+Use Compress
+Aggregation Time: 0.34863853454589844
+Use Compress
+Aggregation Time: 0.613471508026123
+Use Compress
+Aggregation Time: 0.6167683601379395
+Use Compress
+Aggregation Time: 0.34827756881713867
+Use Compress
+Aggregation Time: 0.6220684051513672
+Use Compress
+Aggregation Time: 0.6944069862365723
+Use Compress
+Aggregation Time: 0.4175910949707031
+Use Compress
+Aggregation Time: 0.7579452991485596
+Use Compress
+Aggregation Time: 0.7565581798553467
+Use Compress
+Aggregation Time: 0.4236459732055664
+Use Compress
+Aggregation Time: 0.7744579315185547
+Use Compress
+Aggregation Time: 0.7684178352355957
+Use Compress
+Aggregation Time: 0.4287865161895752
+Use Compress
+Aggregation Time: 0.840644121170044
+Use Compress
+Aggregation Time: 0.8332750797271729
+Use Compress
+Aggregation Time: 0.4559504985809326
+Use Compress
+Aggregation Time: 0.8154594898223877
+Use Compress
+Aggregation Time: 0.8242712020874023
+(0.7506510615348816, 0.6770833730697632, 0.6627603769302368)

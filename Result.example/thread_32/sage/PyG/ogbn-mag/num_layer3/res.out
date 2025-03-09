@@ -1,0 +1,33 @@
+Namespace(device=0, gnn='sage', graph_pooling='sum', drop_ratio=0.5, num_layers=3, emb_dim=256, train_subset=False, batch_size=256, epochs=10, num_workers=0, log_dir='', checkpoint_dir='/home/chenruiyang/Code/GNN/GIFTS/MISC/sage/PyG/ogbn-mag/num_layer3/checkpoint_dir', save_test_dir='', dataset_route='/home/chenruiyang/Code/GNN/GIFTS/dataset', use_cpu_only=True, dataset_name='ogbn-mag', cpu_threads=32)
+#Params: 376157
+Predicting on test data...
+Aggregation Time: 0.527400016784668
+Aggregation Time: 0.44792985916137695
+Aggregation Time: 0.46521878242492676
+Aggregation Time: 0.5638325214385986
+Aggregation Time: 0.4889864921569824
+Aggregation Time: 0.4723927974700928
+Aggregation Time: 0.7971770763397217
+Aggregation Time: 0.47261524200439453
+Aggregation Time: 0.49234461784362793
+Aggregation Time: 0.6365246772766113
+Aggregation Time: 0.4786393642425537
+Aggregation Time: 0.46697092056274414
+Aggregation Time: 0.6630065441131592
+Aggregation Time: 0.4679372310638428
+Aggregation Time: 0.4629948139190674
+Aggregation Time: 0.5913243293762207
+Aggregation Time: 0.45774197578430176
+Aggregation Time: 0.4401979446411133
+Aggregation Time: 0.5740690231323242
+Aggregation Time: 0.4320039749145508
+Aggregation Time: 0.441662073135376
+Aggregation Time: 0.6095573902130127
+Aggregation Time: 0.41131162643432617
+Aggregation Time: 0.4109034538269043
+Aggregation Time: 0.557793378829956
+Aggregation Time: 0.4115879535675049
+Aggregation Time: 0.41156673431396484
+Aggregation Time: 0.6343741416931152
+Aggregation Time: 0.4462423324584961
+Aggregation Time: 0.4352288246154785

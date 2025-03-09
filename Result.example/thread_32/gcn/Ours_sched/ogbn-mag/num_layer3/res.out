@@ -1,0 +1,66 @@
+Namespace(device=0, gnn='gcn', graph_pooling='sum', drop_ratio=0.5, num_layers=3, emb_dim=256, train_subset=False, batch_size=256, epochs=10, num_workers=0, log_dir='', checkpoint_dir='/home/chenruiyang/Code/GNN/GIFTS/MISC/gcn/Ours/ogbn-mag/num_layer3/checkpoint_dir', save_test_dir='', dataset_route='/home/chenruiyang/Code/GNN/GIFTS/dataset', use_cpu_only=True, dataset_name='ogbn-mag', cpu_threads=32, compress_flag=False, reorder_flag=True, value_only_flag=False)
+Reorder pre-processing Time: 0.13303399085998535
+Graph params -> number of nodes: 736389, number of edges: 11529061, number of features: 128, hidden layer: 256, number of classes: 349
+#Params: 188509
+Predicting on test data...
+Use reorder
+Aggregation Time: 0.21774959564208984
+Use reorder
+Aggregation Time: 0.46433067321777344
+Use reorder
+Aggregation Time: 0.4623606204986572
+Use reorder
+Aggregation Time: 0.22205018997192383
+Use reorder
+Aggregation Time: 0.4623250961303711
+Use reorder
+Aggregation Time: 0.4743657112121582
+Use reorder
+Aggregation Time: 0.26346683502197266
+Use reorder
+Aggregation Time: 0.49368953704833984
+Use reorder
+Aggregation Time: 0.4806253910064697
+Use reorder
+Aggregation Time: 0.26952505111694336
+Use reorder
+Aggregation Time: 0.48952651023864746
+Use reorder
+Aggregation Time: 0.48644399642944336
+Use reorder
+Aggregation Time: 0.27135157585144043
+Use reorder
+Aggregation Time: 0.48741698265075684
+Use reorder
+Aggregation Time: 0.4911215305328369
+Use reorder
+Aggregation Time: 0.2599461078643799
+Use reorder
+Aggregation Time: 0.4799153804779053
+Use reorder
+Aggregation Time: 0.4798562526702881
+Use reorder
+Aggregation Time: 0.2597239017486572
+Use reorder
+Aggregation Time: 0.47057342529296875
+Use reorder
+Aggregation Time: 0.49041199684143066
+Use reorder
+Aggregation Time: 0.2613053321838379
+Use reorder
+Aggregation Time: 0.49922728538513184
+Use reorder
+Aggregation Time: 0.4909236431121826
+Use reorder
+Aggregation Time: 0.274799108505249
+Use reorder
+Aggregation Time: 0.48685479164123535
+Use reorder
+Aggregation Time: 0.4990389347076416
+Use reorder
+Aggregation Time: 0.28562140464782715
+Use reorder
+Aggregation Time: 0.4736638069152832
+Use reorder
+Aggregation Time: 0.46602606773376465
+(0.3610950949138382, 0.35549253225234667, 0.3613820072009347)

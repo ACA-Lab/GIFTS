@@ -1,0 +1,65 @@
+Reorder pre-processing Time: 0.42629456520080566
+Graph params -> number of nodes: 2449029, number of edges: 123718280, number of features: 100, hidden layer: 256, number of classes: 47
+#Params: 206895
+Predicting on test data...
+Use reorder
+Aggregation Time: 1.7435340881347656
+Use reorder
+Aggregation Time: 5.365309715270996
+Use reorder
+Aggregation Time: 0.8576242923736572
+Use reorder
+Aggregation Time: 1.7627010345458984
+Use reorder
+Aggregation Time: 5.445171117782593
+Use reorder
+Aggregation Time: 0.8628864288330078
+Use reorder
+Aggregation Time: 1.9057161808013916
+Use reorder
+Aggregation Time: 5.096358776092529
+Use reorder
+Aggregation Time: 0.8103764057159424
+Use reorder
+Aggregation Time: 1.8893256187438965
+Use reorder
+Aggregation Time: 4.769838333129883
+Use reorder
+Aggregation Time: 0.7975246906280518
+Use reorder
+Aggregation Time: 1.9481613636016846
+Use reorder
+Aggregation Time: 4.668623447418213
+Use reorder
+Aggregation Time: 0.7564530372619629
+Use reorder
+Aggregation Time: 2.1496026515960693
+Use reorder
+Aggregation Time: 4.015407562255859
+Use reorder
+Aggregation Time: 0.7320904731750488
+Use reorder
+Aggregation Time: 2.1502437591552734
+Use reorder
+Aggregation Time: 3.969848394393921
+Use reorder
+Aggregation Time: 0.7281672954559326
+Use reorder
+Aggregation Time: 2.145963191986084
+Use reorder
+Aggregation Time: 3.987043857574463
+Use reorder
+Aggregation Time: 0.7142558097839355
+Use reorder
+Aggregation Time: 2.1431734561920166
+Use reorder
+Aggregation Time: 3.9843130111694336
+Use reorder
+Aggregation Time: 0.72719407081604
+Use reorder
+Aggregation Time: 2.1468007564544678
+Use reorder
+Aggregation Time: 3.9299428462982178
+Use reorder
+Aggregation Time: 0.6567525863647461
+(0.9444192965948681, 0.9245225440581848, 0.7901532291261407)

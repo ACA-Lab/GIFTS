@@ -1,0 +1,66 @@
+Namespace(device=0, gnn='sage', graph_pooling='sum', drop_ratio=0.5, num_layers=3, emb_dim=256, train_subset=False, batch_size=256, epochs=10, num_workers=0, log_dir='', checkpoint_dir='/home/chenruiyang/Code/GNN/GIFTS/MISC/sage/Ours/ogbn-mag/num_layer3/checkpoint_dir', save_test_dir='', dataset_route='/home/chenruiyang/Code/GNN/GIFTS/dataset', use_cpu_only=True, dataset_name='ogbn-mag', cpu_threads=32, compress_flag=False, reorder_flag=True, value_only_flag=False)
+Reorder pre-processing Time: 0.1304187774658203
+Graph params -> number of nodes: 736389, number of edges: 10792672, number of features: 128, hidden layer: 256, number of classes: 349
+#Params: 376157
+Predicting on test data...
+Use reorder
+Aggregation Time: 0.19730234146118164
+Use reorder
+Aggregation Time: 0.4344167709350586
+Use reorder
+Aggregation Time: 0.42992401123046875
+Use reorder
+Aggregation Time: 0.20161056518554688
+Use reorder
+Aggregation Time: 0.43056225776672363
+Use reorder
+Aggregation Time: 0.43433356285095215
+Use reorder
+Aggregation Time: 0.19756174087524414
+Use reorder
+Aggregation Time: 0.4497244358062744
+Use reorder
+Aggregation Time: 0.4455101490020752
+Use reorder
+Aggregation Time: 0.23125720024108887
+Use reorder
+Aggregation Time: 0.4554781913757324
+Use reorder
+Aggregation Time: 0.46035075187683105
+Use reorder
+Aggregation Time: 0.23154830932617188
+Use reorder
+Aggregation Time: 0.4651508331298828
+Use reorder
+Aggregation Time: 0.454129695892334
+Use reorder
+Aggregation Time: 0.26526665687561035
+Use reorder
+Aggregation Time: 0.4476308822631836
+Use reorder
+Aggregation Time: 0.4419839382171631
+Use reorder
+Aggregation Time: 0.2631068229675293
+Use reorder
+Aggregation Time: 0.47432661056518555
+Use reorder
+Aggregation Time: 0.44771885871887207
+Use reorder
+Aggregation Time: 0.2696216106414795
+Use reorder
+Aggregation Time: 0.432314395904541
+Use reorder
+Aggregation Time: 0.42581701278686523
+Use reorder
+Aggregation Time: 0.2771022319793701
+Use reorder
+Aggregation Time: 0.416672945022583
+Use reorder
+Aggregation Time: 0.4164741039276123
+Use reorder
+Aggregation Time: 0.27368974685668945
+Use reorder
+Aggregation Time: 0.4049224853515625
+Use reorder
+Aggregation Time: 0.3956313133239746
+(0.3634474904339622, 0.35447525393424684, 0.3576623190824769)

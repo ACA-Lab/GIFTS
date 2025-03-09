@@ -1,0 +1,96 @@
+Namespace(device=0, gnn='sage', graph_pooling='sum', drop_ratio=0.5, num_layers=3, emb_dim=256, train_subset=False, batch_size=256, epochs=10, num_workers=0, log_dir='', checkpoint_dir='/home/chenruiyang/Code/GNN/GIFTS/MISC/sage/Ours/ogbn-mag/num_layer3/checkpoint_dir', save_test_dir='', dataset_route='/home/chenruiyang/Code/GNN/GIFTS/dataset', use_cpu_only=True, dataset_name='ogbn-mag', cpu_threads=32, compress_flag=True, reorder_flag=True, value_only_flag=False)
+Reorder pre-processing Time: 0.1295154094696045
+Graph params -> number of nodes: 736389, number of edges: 10792672, number of features: 128, hidden layer: 256, number of classes: 349
+#Params: 376157
+Predicting on test data...
+Use reorder
+Use Compress
+Aggregation Time: 0.1256697177886963
+Use reorder
+Use Compress
+Aggregation Time: 0.23242497444152832
+Use reorder
+Use Compress
+Aggregation Time: 0.23243951797485352
+Use reorder
+Use Compress
+Aggregation Time: 0.12085986137390137
+Use reorder
+Use Compress
+Aggregation Time: 0.22903156280517578
+Use reorder
+Use Compress
+Aggregation Time: 0.23394227027893066
+Use reorder
+Use Compress
+Aggregation Time: 0.12101888656616211
+Use reorder
+Use Compress
+Aggregation Time: 0.24292969703674316
+Use reorder
+Use Compress
+Aggregation Time: 0.24156761169433594
+Use reorder
+Use Compress
+Aggregation Time: 0.1267852783203125
+Use reorder
+Use Compress
+Aggregation Time: 0.23980355262756348
+Use reorder
+Use Compress
+Aggregation Time: 0.23275065422058105
+Use reorder
+Use Compress
+Aggregation Time: 0.12489581108093262
+Use reorder
+Use Compress
+Aggregation Time: 0.23055529594421387
+Use reorder
+Use Compress
+Aggregation Time: 0.23140716552734375
+Use reorder
+Use Compress
+Aggregation Time: 0.1252450942993164
+Use reorder
+Use Compress
+Aggregation Time: 0.23408102989196777
+Use reorder
+Use Compress
+Aggregation Time: 0.2271273136138916
+Use reorder
+Use Compress
+Aggregation Time: 0.12053108215332031
+Use reorder
+Use Compress
+Aggregation Time: 0.23354458808898926
+Use reorder
+Use Compress
+Aggregation Time: 0.23790764808654785
+Use reorder
+Use Compress
+Aggregation Time: 0.11980128288269043
+Use reorder
+Use Compress
+Aggregation Time: 0.23647117614746094
+Use reorder
+Use Compress
+Aggregation Time: 0.23327875137329102
+Use reorder
+Use Compress
+Aggregation Time: 0.12160587310791016
+Use reorder
+Use Compress
+Aggregation Time: 0.23812508583068848
+Use reorder
+Use Compress
+Aggregation Time: 0.23034954071044922
+Use reorder
+Use Compress
+Aggregation Time: 0.1243441104888916
+Use reorder
+Use Compress
+Aggregation Time: 0.23543977737426758
+Use reorder
+Use Compress
+Aggregation Time: 0.2353649139404297
+(0.36342684145235404, 0.3544906672420968, 0.3576623190824769)
