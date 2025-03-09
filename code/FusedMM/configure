@@ -1,0 +1,289 @@
+#!/bin/sh 
+#
+#  configure script to setup Makefile, kernels/Make.inc, kernels/Makefile, 
+#     kernels/rungen.sh  
+#  dependencies : 
+#  shell built-in deps: echo
+#  other dependencies:  sed, awk, uname, lscpu for linux / sysctl for macOS 
+
+#
+#  Setting paths 
+#
+path=`echo $0 | sed -e "s/configure$//"`
+#echo $path 
+topdir=`pwd`
+#
+#  configure should be called directly from the main project directory, 
+#  Please do NOT create extra build directory to run configure
+#
+if test "$path" != "./" 
+then
+   #path=`echo "$path" | sed -e "s|/.//||g"` 
+   ctopdir=$topdir/
+   if test "$path" != "$ctopdir"
+   then
+      echo "run configure from the project dir and use ./configure"
+      exit 1
+   fi
+fi
+topkdir=$topdir/kernels
+
+#
+#  MacOS uses different commands, even same commands may use different arguments
+#     (e.g., sed -i)
+#     NOTE: This version is not compatible with macOS yet because of 'sed -i'
+#        changing it with 'sed -i""' may work 
+#
+OSGUESS=`uname`
+flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+if test "$flag" != $OSGUESS
+   then
+      echo "This configure script is not compatible with macOS yet!"
+      exit 1
+fi
+#
+#  detecting compiler, gcc and g++ are required (dependencies on openmp)  
+#
+echo "Checking for gcc ... ... "
+cc=`gcc --version | grep -e gcc`
+if [ -z "$cc" ]
+then
+   flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+   if test "$flag" != $OSGUESS
+   then 
+      #echo "MacOS uses clang by default"
+      #cc=`clang --version | grep clang`
+      #if [ -z "$cc" ]
+      #then
+      #   echo "At least clang is required on MacOS!"
+      #   exit 1
+      #fi
+      echo "gcc is required, even in MacOS to get openmp!"
+      echo "This configure is not compatible with macOS yet!"
+      exit 1
+   else
+      echo "gcc is required!"
+      exit 1
+   fi
+fi
+echo "--- $cc"
+cc=gcc    # gcc command should work on macOS even it's using clang 
+
+#
+# Generate makefiles 
+#  - before detecting the hardware so that it can be updated manually when 
+#     hardware detection fails. You may need to copy the kernels/CONFIG/rungen.top
+#     to kernels/rungen.sh and update it manuall as well (if configure fails).  
+#
+echo "Compiling code generator tool ... ... " 
+mkdir -p $topkdir/bin
+$cc -O3 -w -o $topkdir/bin/xextract $topkdir/codegen/extract.c 2> /dev/null 
+ext=$topkdir/bin/xextract
+echo "Generating Makefiles to build the project ... ... "
+mbase=$topkdir/CONFIG/make.base
+$ext -b $topkdir/CONFIG/make.base -langM rout=make.inc -o $topkdir/Make.inc 
+$ext -b $topkdir/CONFIG/make.base -langM rout=make.kern -o $topkdir/Makefile 
+$ext -b $topkdir/CONFIG/make.base -langM rout=make.top -o $topdir/Makefile 
+
+#
+#  replace old TOP with current dir 
+#
+vtopkdir="TOP = $topkdir"
+oldtop="TOP ="
+newtop=$vtopkdir
+sed -i "s|$oldtop|$newtop|g" $topkdir/Make.inc 
+
+oldkcc="KCC ="
+newkcc="KCC = $cc"
+sed -i "s/$oldkcc/$newkcc/g" $topkdir/Make.inc
+
+#
+#  Detect system arch 
+#
+echo "Figuring out the architecture of the system ... ... "
+# if macOS 
+flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+if test "$flag" != $OSGUESS
+then
+   carch=`sysctl -a | grep -e X86`
+   # only X86 supported for MacOS for now 
+   arch=X86
+   if [ -z "$carch" ]
+   then
+      arch=
+   fi
+else  # other: only considered LINUX 
+   carch=`lscpu | grep -e x86`
+   arch=X86
+   if [ -z "$carch" ]
+   then
+      # check whether it is arch64
+      carch=`lscpu | grep -e aarch64`
+      arch=ARM64
+      if [ -z "$carch" ]
+      then
+         arch=
+      fi
+   fi
+fi
+
+if [ -z "$arch" ]
+then
+   echo "Can not figure out the architecture, set ARCH flag manually"
+   exit 2
+fi
+
+#echo "ARCH = $arch"
+arch=BLC_$arch
+oldarch="ARCH ="
+newarch="ARCH = $arch"
+sed -i "s/$oldarch/$newarch/g" $topkdir/Make.inc
+
+echo "--- $arch"
+
+#
+#  Detect SIMD unit 
+#
+echo "Figuring out the SIMD unit of the system ... ... "
+svlen=
+dvlen=
+if  test "$arch" = "BLC_X86" 
+then
+   # macOS uses different commands  
+   flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+   if test "$flag" != $OSGUESS
+   then
+      csimdf=`sysctl -a | grep -e avx512f | cut -d':' -f 2 | grep 1`
+      csimddq=`sysctl -a | grep -e avx512dq | cut -d':' -f 2 | grep 1`
+   else
+      csimdf=`lscpu | grep -e avx512f`
+      csimddq=`lscpu | grep -e avx512dq`
+   fi
+   simd=AVXZ
+   svlen=16
+   dvlen=8
+   cflags="-mavx512f -mavx512dq"
+   if [ -z "$csimdf" ] || [ -z "$csimddq" ]
+   then
+      # macOS uses different commands  
+      flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+      if test "$flag" != $OSGUESS
+      then
+         csimd=`sysctl -a | grep -e avx2 | cut -d':' -f 2 | grep 1`
+      else
+         csimd=`lscpu | grep -e avx2`
+      fi
+      simd=AVX2
+      svlen=8
+      dvlen=4
+      cflags="-mavx -mfma"
+      if [ -z "$csimd" ] 
+      then
+         simd=AVX
+         cflags="-mavx"
+         # macOS uses different commands  
+         flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+         if test "$flag" != $OSGUESS
+         then
+            csimd=`sysctl -a | grep -e avx | cut -d':' -f 2 | grep 1`
+         else
+            csimd=`lscpu | grep -e avx`
+         fi
+         if [ -z "$csimd" ] 
+         then
+            simd=SSE
+            svlen=4
+            dvlen=2
+            cflags="-msse"
+            # macOS uses different commands  
+            flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+            if test "$flag" != $OSGUESS
+            then
+               csimd=`sysctl -a | grep -e sse | cut -d':' -f 2 | grep 1`
+            else
+               csimd=`lscpu | grep -e sse`
+            fi
+            if [ -z "$csimd" ] 
+            then
+               simd=
+            fi
+         fi
+      fi
+   fi
+
+   if test "$simd" = "SSE"
+   then
+      echo "not supported SSE only system for now!"
+      exit 3
+   fi
+   if [ -z "$simd" ] 
+   then
+      echo "can't figure out SIMD unit for this X86 system!"
+      exit 3
+   fi
+   simd=BLC_$simd
+fi
+
+if  test "$arch" = "BLC_ARM64" 
+then
+   csimd=`lscpu | grep -e asimd`
+   simd=ASIMD
+   svlen=4
+   dvlen=2
+   cflags="-march=armv8-a"
+   if [ -z "$csimd" ] 
+   then
+      simd=
+      echo "unknown simd unit for ARM64!"
+      exit 3
+   fi
+   simd=BLC_ARM_$simd
+fi
+
+echo "--- $simd"
+echo "--- $cflags"
+oldsimd="SIMD ="
+newsimd="SIMD = $simd"
+sed -i "s/$oldsimd/$newsimd/g" $topkdir/Make.inc
+
+oldflg="KCCFLAGS ="
+newflg="KCCFLAGS = -O3 $cflags"
+sed -i "s/$oldflg/$newflg/g" $topkdir/Make.inc
+
+echo "Generating run script ... ..."
+oldpre="PRE=x"
+# default float
+newpre="PRE=s" 
+sed "s/$oldpre/$newpre/" $topkdir/CONFIG/rungen.top > $topkdir/rungen.sh
+sed -i "s/VLEN=x/VLEN=$svlen/" $topkdir/rungen.sh
+chmod u+x $topkdir/rungen.sh 
+
+#
+#  optional: update Makefile of tester/timer with appropriate pre and vlen
+#
+sed -i "s/pre=.*/pre=s/" $topdir/Makefile
+sed -i "s/vlen=.*/vlen=$svlen/" $topdir/Makefile
+#
+#  update number of threads as the number of cores 
+#
+# macOS uses different commands  
+flag=`echo "$OSGUESS" | sed -e "s/Darwin//"`  # removed the Darwin if exists
+if test "$flag" != $OSGUESS
+then
+   nth=`sysctl -a| grep core_count | cut -d ':' -f 2`
+else
+   # nth=`grep 'cpu cores' /proc/cpuinfo | uniq | cut -d ':' -f 2 -s`
+   nth=32
+   # nth=`echo "$(( $(lscpu | awk '/^Socket\(s\)/{ print $2 }') * $(lscpu | awk '/^Core\(s\) per socket/{ print $4 }') ))"`
+fi
+if [ -z "$nth" ]
+   then
+      echo "******* WARNING:  Can't detect number of cores!!!"
+      echo "******* Please manually update NTHREADS in Makefile."
+   else
+      echo "Number of cores detected = $nth ... Updating NTHREADS in Makefile "
+fi
+nth=`echo $nth | sed 's. ..g'`
+sed -i "s/NTHREADS=48/NTHREADS=$nth/" $topdir/Makefile
+
+echo "Done configure"
