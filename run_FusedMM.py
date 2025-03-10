@@ -10,8 +10,8 @@ Out_K = [47, 349, 256]
 
 for num, dataset in enumerate(datasets):
     res_rt = os.path.join(program_rt, "Result_FusedMM", dataset)
-    inf_prog_rt = os.path.join(program_rt, "Official_Code", "FusedMM", "bin", "xsOptFusedMMtime_gcn_pt")
-    data_rt = os.path.join(program_rt, "Official_Code", "FusedMM", "dataset", f"{dataset}.mtx")
+    inf_prog_rt = os.path.join(program_rt, "code", "FusedMM", "bin", "xsOptFusedMMtime_gcn_pt")
+    data_rt = os.path.join(program_rt, "code", "FusedMM", "dataset", f"{dataset}.mtx")
     if not os.path.exists(res_rt):
         os.makedirs(res_rt)
     # Default K
