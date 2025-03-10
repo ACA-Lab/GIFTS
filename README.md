@@ -120,8 +120,7 @@ model = GCN(..., ReorderSeq=ReorderSeq, ...).to(device)
 
 ## FAQs
 
-1. **DGL’s ogbl-citation2 Results.** If you create a conda environment using `environment.yml`, you may encounter issues running DistGNN (DGL) on ogbl-citation2. This is because PyG 2.3.0 lacks the `to_dgl()` function. In our experiments, we used PyG 2.5.0, but it caused version conflicts when creating a one-click conda environment. Therefore, we selected PyG 2.3.0 for compatibility with other libraries. To resolve this, you can manually install PyG via `pip install torch_geometric` or try initializing conda with our experimental environment (`environment_real.yml`), though our tests showed failures due to some dependencies being installed via pip.
-
+1. **DGL’s ogbl-citation2 Results.** If you create a conda environment using `environment.yml`, you may encounter issues running DistGNN (DGL) on ogbl-citation2. This is because PyG 2.3.0 lacks the `to_dgl()` function. In our experiments, we used PyG 2.5.1, but it caused version conflicts when creating a one-click conda environment. Therefore, we selected PyG 2.3.0 for compatibility with other libraries. To resolve this, you can manually install PyG via `pip install torch_geometric` or try initializing conda with our experimental environment (`environment_real.yml`), though our tests showed failures due to some dependencies being installed via pip.
 2. **Reproducing FusedMM.** Since FusedMM is not compatible with mainstream frameworks like PyG and DGL, we reproduce it using the author’s provided code (`code/FusedMM`). First, we convert PyG datasets into a format supported by FusedMM using our automated script (`generate_FusedMM_data.py`). Next, you need to compile the FusedMM kernel, following the steps in `code/FusedMM/README.md`. Finally, we provide a test script (`run_FusedMM.py`) that automates result generation.
 
 ## Citation
