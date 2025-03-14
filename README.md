@@ -28,6 +28,7 @@ conda env create --file environment.yml
 to install python packages and run
 
 ```bash
+conda activate GIFTS
 cd pytorch_sparse
 bash compile.sh
 ```
