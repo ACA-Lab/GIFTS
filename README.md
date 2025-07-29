@@ -129,11 +129,15 @@ model = GCN(..., ReorderSeq=ReorderSeq, ...).to(device)
 To cite our work, please use
 
 ```bibtex
-@inproceedings{chen2025gifts,
-  abbr      = {IPDPS},
-  author    = {Ruiyang Chen and Xing Li and Xiaoyao Liang and Zhuoran Song},
-  title     = {GIFTS: Efficient GCN Inference Framework on PyTorch-CPU via Exploring the Sparsity},
-  booktitle = {Proceedings of the IEEE International Parallel \& Distributed Processing Symposium (IPDPS)},
-  year      = {2025},
-}
+@INPROCEEDINGS {GIFTS,
+author = { Chen, Ruiyang and Li, Xing and Liang, Xiaoyao and Song, Zhuoran },
+booktitle = { 2025 IEEE International Parallel and Distributed Processing Symposium (IPDPS) },
+title = {{ GIFTS: Efficient GCN Inference Framework on PyTorch-CPU via Exploring the Sparsity }},
+year = {2025},
+pages = {1286-1297},
+doi = {10.1109/IPDPS64566.2025.00116},
+url = {https://doi.ieeecomputersociety.org/10.1109/IPDPS64566.2025.00116},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =Jun}
 ```
